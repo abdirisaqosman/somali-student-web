@@ -1,0 +1,88 @@
+.join-section {
+  background-color: var(--bg-color);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.join-container {
+  max-width: 700px;
+}
+
+.join-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.join-desc {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.form-card {
+  padding: 40px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--light-blue);
+  box-shadow: 0 0 0 3px rgba(36, 139, 244, 0.1);
+  background-color: var(--white);
+}
+
+.submit-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--primary-blue);
+}
+
+.success-message h3 {
+  color: #10b981;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+  .form-card {
+    padding: 25px;
+  }
+}

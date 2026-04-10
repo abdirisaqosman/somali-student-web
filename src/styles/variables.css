@@ -1,0 +1,19 @@
+:root {
+  /* Colors from logo */
+  --primary-blue: #004e9a; /* Logo deep blue */
+  --light-blue: #248bf4; /* Logo bright blue */
+  --primary-red: #da291c; /* Flag red */
+  --primary-orange: #f26b21; /* Logo energetic orange */
+  --white: #ffffff;
+  --bg-color: #f7f9fc;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  /* Typography */
+  --font-main: 'Outfit', 'Inter', sans-serif;
+}

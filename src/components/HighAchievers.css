@@ -1,0 +1,88 @@
+.achievers {
+  background-color: var(--bg-color);
+}
+
+.achievers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.achiever-card {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px;
+  background: var(--white);
+  border-radius: 16px;
+  gap: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achiever-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-left: 5px solid var(--primary-orange);
+}
+
+.achiever-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--light-blue);
+  flex-shrink: 0;
+}
+
+.achiever-info {
+  flex-grow: 1;
+}
+
+.achiever-name {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+  color: var(--text-dark);
+}
+
+.achiever-major {
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.achiever-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(242, 107, 33, 0.08);
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(242, 107, 33, 0.15);
+}
+
+.trophy-icon {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.achievement-text {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .achiever-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .achiever-highlight {
+    justify-content: center;
+    text-align: left;
+    margin-top: 15px;
+  }
+}
