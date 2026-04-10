@@ -14,9 +14,18 @@
   margin-bottom: 40px;
 }
 
+.footer-logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+}
+
 .footer-brand p {
   color: rgba(255, 255, 255, 0.8);
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .footer-social {

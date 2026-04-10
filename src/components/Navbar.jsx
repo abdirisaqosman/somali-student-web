@@ -11,7 +11,9 @@ const Navbar = () => {
     <nav className="navbar glass-panel">
       <div className="container nav-content">
         <div className="logo">
-          <Link to="/" className="logo-text">ASSA</Link>
+          <Link to="/" className="logo-link">
+            <img src="/logo.jpg" alt="ASSA Logo" className="navbar-logo" />
+          </Link>
         </div>
         
         <ul className="nav-links">
@@ -46,8 +48,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/articles" className={location.pathname === '/articles' ? 'active-link' : ''}>
-              {t('nav_articles')}
+            <Link to="/opinions" className={location.pathname === '/opinions' ? 'active-link' : ''}>
+              {t('nav_opinions')}
             </Link>
           </li>
         </ul>

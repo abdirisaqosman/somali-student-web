@@ -5,7 +5,7 @@
   "nav_achievers": "Başarılı Öğrenciler",
   "nav_team": "Ekibimiz",
   "nav_gallery": "Galeri",
-  "nav_articles": "Makaleler",
+  "nav_opinions": "Görüşler",
   "hero_title": "Ankara Somalili Öğrenciler Birliği",
   "hero_subtitle": "Ankara'daki Somalili Öğrencileri Birleştiren ve Destekleyen Birlik.",
   "hero_cta": "Bize Katılın",
@@ -33,7 +33,7 @@
   "form_university": "Üniversite (Ankara)",
   "form_degree": "Eğitim Seviyesi",
   "form_submit": "Başvuruyu Gönder",
-  "articles_title": "Duyurular ve Makaleler",
-  "articles_desc": "En son haberlerimizi, duyurularımızı ve öğrenci hikayelerini okuyun.",
+  "opinions_title": "Görüşler ve Bakış Açıları",
+  "opinions_desc": "Öğrenci topluluğumuzdan gelen deneyimleri, düşünceleri ve hikayeleri okuyun.",
   "footer_rights": "Tüm Hakları Saklıdır."
 }

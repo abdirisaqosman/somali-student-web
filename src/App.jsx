@@ -11,7 +11,7 @@ import AchieversPage from './pages/AchieversPage';
 import TeamPage from './pages/TeamPage';
 import GalleryPage from './pages/GalleryPage';
 import JoinPage from './pages/JoinPage';
-import ArticlesPage from './pages/ArticlesPage';
+import OpinionsPage from './pages/OpinionsPage';
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
             <Route path="/team" element={<TeamPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/join" element={<JoinPage />} />
-            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/opinions" element={<OpinionsPage />} />
           </Routes>
         </main>
 

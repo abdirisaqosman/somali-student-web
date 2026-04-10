@@ -5,7 +5,7 @@
   "nav_achievers": "High Achievers",
   "nav_team": "Team",
   "nav_gallery": "Gallery",
-  "nav_articles": "Articles",
+  "nav_opinions": "Opinions",
   "hero_title": "Ankara Somali Students' Association",
   "hero_subtitle": "Uniting, Empowering, and Inspiring Somali Students in Ankara.",
   "hero_cta": "Join Us Today",
@@ -33,7 +33,7 @@
   "form_university": "University in Ankara",
   "form_degree": "Degree Level",
   "form_submit": "Submit Application",
-  "articles_title": "Notices & Articles",
-  "articles_desc": "Read our latest news, announcements, and insightful student stories.",
+  "opinions_title": "Opinions & Perspectives",
+  "opinions_desc": "Read thoughts, insights, and stories from our vibrant student community.",
   "footer_rights": "All Rights Reserved."
 }

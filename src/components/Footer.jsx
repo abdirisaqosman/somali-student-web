@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-content">
         <div className="footer-brand">
-          <h2 className="logo-text" style={{color: 'var(--white)'}}>ASSA</h2>
+          <img src="/logo.jpg" alt="ASSA Logo" className="footer-logo" />
           <p>Ankara Somali Students' Association</p>
         </div>
         
