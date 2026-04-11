@@ -1,88 +1,219 @@
 .join-section {
   background-color: var(--bg-color);
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+  min-height: 100vh;
 }
 
-.join-container {
-  max-width: 700px;
+/* ── Two-column wrapper ── */
+.join-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,0.1);
+}
+
+/* ── Info panel (left, dark) ── */
+.join-info-panel {
+  background: linear-gradient(160deg, #001a3d 0%, #003070 100%);
+  padding: 60px 44px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.join-info-orb {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(36,139,244,0.18) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.join-info-title {
+  font-size: 1.9rem;
+  color: white;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.join-info-desc {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Benefits list */
+.join-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+}
+
+.join-benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.benefit-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-orange);
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+
+.benefit-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.join-benefit:hover .benefit-icon {
+  background: rgba(242,107,33,0.2);
+}
+
+.join-benefit h4 {
+  font-size: 0.95rem;
+  color: white;
+  margin: 0 0 3px;
+  font-weight: 600;
+}
+
+.join-benefit p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Form panel (right, light) ── */
+.join-form-panel {
+  background: var(--white);
+  padding: 60px 50px;
 }
 
 .join-header {
-  text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .join-desc {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.form-card {
-  padding: 40px;
-  background: var(--white);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
+/* ── Form fields ── */
 .join-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
 }
 
 .form-group label {
   font-weight: 600;
   color: var(--primary-blue);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+  letter-spacing: 0.3px;
 }
 
 .form-group input,
 .form-group select {
-  padding: 12px 15px;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  padding: 13px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
   font-family: var(--font-main);
   font-size: 1rem;
-  transition: all 0.3s ease;
-  background-color: #f8fafc;
+  transition: border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  background: #f8fafc;
+  outline: none;
 }
 
 .form-group input:focus,
 .form-group select:focus {
-  outline: none;
   border-color: var(--light-blue);
-  box-shadow: 0 0 0 3px rgba(36, 139, 244, 0.1);
-  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(36,139,244,0.12);
+  background: var(--white);
 }
 
 .submit-btn {
-  margin-top: 10px;
+  margin-top: 8px;
   width: 100%;
   padding: 15px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
 }
 
+/* ── Success state ── */
 .success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 40px 20px;
-  color: var(--primary-blue);
+  padding: 60px 20px;
+  gap: 14px;
+}
+
+.success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(16,185,129,0.35);
 }
 
 .success-message h3 {
+  font-size: 1.4rem;
   color: #10b981;
-  margin-bottom: 15px;
 }
 
-@media (max-width: 600px) {
-  .form-card {
-    padding: 25px;
+.success-message p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .join-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .join-info-panel {
+    padding: 50px 36px;
+  }
+
+  .join-form-panel {
+    padding: 50px 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-info-panel,
+  .join-form-panel {
+    padding: 40px 24px;
   }
 }

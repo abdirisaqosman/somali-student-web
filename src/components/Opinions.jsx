@@ -1,60 +1,43 @@
-import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
+import articles from '../data/articles';
 import './Opinions.css';
 
+const ArticleCard = ({ article, featured = false }) => (
+  <Link
+    to={`/opinions/${article.id}`}
+    className={`article-card${featured ? ' article-card--featured' : ''}`}
+  >
+    <div className="article-img-wrapper">
+      <img src={article.image} alt={article.title} loading="lazy" />
+      <span className="article-category">{article.category}</span>
+    </div>
+    <div className="article-content">
+      <span className="article-date">{article.date}</span>
+      <h3 className="article-title">{article.title}</h3>
+      <p className="article-excerpt">{article.excerpt}</p>
+      <span className="read-more-btn">Read More →</span>
+    </div>
+  </Link>
+);
+
 const Opinions = () => {
-  const { t } = useLanguage();
-  
-  const dummyArticles = [
-    {
-      id: 1,
-      title: 'Welcome Freshers 2026',
-      date: 'April 10, 2026',
-      excerpt: 'A warm welcome to all the new Somali students joining universities in Ankara this year. Here is everything you need to know to get started.',
-      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80',
-      category: 'Opinion'
-    },
-    {
-      id: 2,
-      title: 'National Day Celebrations Review',
-      date: 'July 2, 2025',
-      excerpt: 'Looking back at the incredible celebrations held by ASSA commemorating our National Independence Day right here in the heart of Turkey.',
-      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80',
-      category: 'Reflection'
-    },
-    {
-      id: 3,
-      title: 'Guide to Academic Success in Ankara',
-      date: 'September 15, 2025',
-      excerpt: 'Tips from our high achieving students on managing time, studying effectively, and balancing social life while abroad.',
-      image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80',
-      category: 'Advice'
-    }
-  ];
+  const featured = articles.find(a => a.featured);
+  const rest = articles.filter(a => !a.featured);
 
   return (
     <section className="articles-section section-padding">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">{t('opinions_title')}</h2>
+          <h2 className="section-title">Opinions & Perspectives</h2>
           <div className="title-underline mx-auto"></div>
-          <p className="articles-desc">{t('opinions_desc')}</p>
+          <p className="articles-desc">Read thoughts, insights, and stories from our vibrant student community.</p>
         </div>
 
+        {featured && <ArticleCard article={featured} featured />}
+
         <div className="articles-grid">
-          {dummyArticles.map(article => (
-            <article key={article.id} className="article-card glass-panel">
-              <div className="article-img-wrapper">
-                <img src={article.image} alt={article.title} />
-                <span className="article-category">{article.category}</span>
-              </div>
-              <div className="article-content">
-                <span className="article-date">{article.date}</span>
-                <h3 className="article-title">{article.title}</h3>
-                <p className="article-excerpt">{article.excerpt}</p>
-                <button className="read-more-btn">Read More →</button>
-              </div>
-            </article>
+          {rest.map(article => (
+            <ArticleCard key={article.id} article={article} />
           ))}
         </div>
       </div>

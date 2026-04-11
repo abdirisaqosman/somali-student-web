@@ -1,0 +1,228 @@
+/* ── Hero ── */
+.article-hero {
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 80px; /* clear fixed navbar */
+}
+
+.article-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 26, 61, 0.3) 0%,
+    rgba(0, 26, 61, 0.85) 100%
+  );
+}
+
+.article-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-main);
+  transition: background 0.25s;
+  margin-bottom: 4px;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.article-category-badge {
+  background: var(--primary-orange);
+  color: white;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-hero-title {
+  font-size: 2.6rem;
+  color: white;
+  line-height: 1.25;
+  max-width: 700px;
+  margin: 0;
+}
+
+.article-hero-date {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Layout ── */
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 50px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  align-items: start;
+}
+
+/* ── Body card ── */
+.article-body-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+.article-lead {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+.article-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--primary-orange);
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.article-para {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin: 0 0 20px;
+}
+
+.article-para:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Sidebar ── */
+.article-more {
+  position: sticky;
+  top: 100px;
+}
+
+.more-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-orange);
+  margin-bottom: 20px;
+}
+
+.more-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.more-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-decoration: none;
+}
+
+.more-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 78, 154, 0.1);
+}
+
+.more-card-img {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.more-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.more-card-category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--primary-orange);
+}
+
+.more-card-title {
+  font-size: 0.9rem;
+  color: var(--primary-blue);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.more-card-date {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── 404 ── */
+.article-not-found {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 40px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-more {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-hero {
+    height: 360px;
+  }
+
+  .article-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .article-body-card {
+    padding: 28px 22px;
+  }
+}

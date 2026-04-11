@@ -1,0 +1,56 @@
+const articles = [
+  {
+    id: 1,
+    title: 'Welcome Freshers 2026',
+    date: 'April 10, 2026',
+    excerpt: 'A warm welcome to all the new Somali students joining universities in Ankara this year. Here is everything you need to know to get started.',
+    body: [
+      'A warm welcome to all the new Somali students joining universities in Ankara this year! Starting university in a foreign country can feel overwhelming, but you are not alone. ASSA — the Ankara Somali Students\' Association — is here to make your transition as smooth as possible.',
+      'Here is what you should do first: register with ASSA by filling out our join form on the website. Membership is free and gives you access to all our events, mentoring programmes, and community support channels.',
+      'In your first weeks, focus on settling in. Find the student affairs office at your university and get your student ID sorted. If you need help with Turkish bureaucracy — such as residence permits or bank accounts — reach out to our team directly through our social media channels.',
+      'Academically, make contact with your professors early and attend all orientation sessions. Many universities offer Turkish language courses for international students — we strongly encourage you to take one.',
+      'Socially, join our weekly meetups and get to know other ASSA members. Ankara has a vibrant Somali student community, and these friendships will be some of the most valuable things you take home with you.',
+      'We are proud of each one of you for making it here. Study hard, stay connected, and make us proud.',
+    ],
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80',
+    category: 'Announcement',
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'National Day Celebrations Review',
+    date: 'July 2, 2025',
+    excerpt: 'Looking back at the incredible celebrations held by ASSA commemorating our National Independence Day right here in the heart of Turkey.',
+    body: [
+      'On July 1st, 2025, ASSA held its annual Somali National Day celebration at a venue in central Ankara, bringing together over 200 students, alumni, and friends of the Somali community.',
+      'The evening began with the raising of the Somali flag and a recitation of the national anthem, followed by opening remarks from ASSA President Ahmed Ali, who spoke about the importance of staying connected to our roots while building our futures abroad.',
+      'Students performed traditional Somali songs and dances, drawing cheers from the audience. A traditional food spread prepared by community members included bariis iyo hilib, sambuus, and malawah — flavours of home that reminded everyone why these celebrations matter.',
+      'The highlight of the night was a spoken word performance by second-year medicine student Khadija Osman, whose poem about the journey from Mogadishu to Ankara moved many in the audience to tears.',
+      'The event concluded with an open mic session where students shared their experiences, aspirations, and gratitude. Several alumni also attended and offered mentorship and career advice to current students.',
+      'ASSA thanks everyone who contributed to making this event possible. National Day 2026 is already being planned — watch this space.',
+    ],
+    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1200&q=80',
+    category: 'Reflection',
+    featured: false,
+  },
+  {
+    id: 3,
+    title: 'Guide to Academic Success in Ankara',
+    date: 'September 15, 2025',
+    excerpt: 'Tips from our high achieving students on managing time, studying effectively, and balancing social life while abroad.',
+    body: [
+      'Studying abroad is one of the most rewarding challenges you will ever face. We asked some of ASSA\'s highest-achieving students to share the strategies that helped them thrive academically in Ankara.',
+      'Master your schedule early. Every student who excelled agreed on this: plan your week on Sunday. Block study hours the same way you block class hours — treat them as unmissable appointments.',
+      'Use the university library, not your room. Your room is for rest. Going to the library creates a mental shift into study mode. Most Ankara universities have excellent facilities and quiet zones open late into the night.',
+      'Form study groups with local students. Your Turkish classmates have studied the same professors for years. They know the exam style and the key topics. Befriend them — language barriers are smaller than you think.',
+      'Reach out to professors early. Office hours exist for a reason. A student who visits a professor\'s office once is remembered. Being remembered is never a disadvantage at exam time.',
+      'Take care of your body. Sleep, food, and exercise are not rewards — they are fuel. Students who skip these consistently underperform, no matter how many hours they log.',
+      'Academic success is not about being the smartest person in the room. It is about consistency, discipline, and asking for help when you need it. You have already proven you belong here — now go show it.',
+    ],
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80',
+    category: 'Advice',
+    featured: false,
+  },
+];
+
+export default articles;

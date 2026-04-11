@@ -61,3 +61,34 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+/* ── Shared section utilities ── */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  /* Keep first-page section titles clear of the fixed mobile navbar */
+  main > section.section-padding:first-child {
+    padding-top: 96px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

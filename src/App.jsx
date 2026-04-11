@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,13 +11,14 @@ import TeamPage from './pages/TeamPage';
 import GalleryPage from './pages/GalleryPage';
 import JoinPage from './pages/JoinPage';
 import OpinionsPage from './pages/OpinionsPage';
+import ArticlePage from './pages/ArticlePage';
 
 function App() {
   return (
     <Router>
       <div className="app">
         <Navbar />
-        
+
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,6 +29,7 @@ function App() {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/join" element={<JoinPage />} />
             <Route path="/opinions" element={<OpinionsPage />} />
+            <Route path="/opinions/:id" element={<ArticlePage />} />
           </Routes>
         </main>
 
