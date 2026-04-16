@@ -80,6 +80,38 @@
   gap: 12px;
 }
 
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(0, 78, 154, 0.07);
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  padding: 4px 9px;
+  border-radius: 16px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.03em;
+}
+
+.lang-btn:hover {
+  background: rgba(0, 78, 154, 0.1);
+  color: var(--primary-blue);
+}
+
+.lang-btn.lang-active {
+  background: var(--primary-blue);
+  color: #fff;
+}
+
 .nav-join-btn {
   padding: 9px 20px;
   font-size: 0.88rem;
@@ -194,5 +226,14 @@
     margin-top: 8px;
     padding-top: 12px;
     border-top: 1px solid rgba(0, 0, 0, 0.07);
+  }
+
+  .lang-switcher {
+    background: rgba(0, 78, 154, 0.06);
+  }
+
+  .lang-btn {
+    font-size: 0.7rem;
+    padding: 3px 7px;
   }
 }

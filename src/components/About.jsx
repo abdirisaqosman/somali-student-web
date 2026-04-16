@@ -14,7 +14,7 @@ const features = [
   },
   {
     title: 'Strong Community',
-    desc: 'Building lasting bonds among Somali students across Ankara',
+    desc: 'Building lasting bonds among Somali students across Turkey',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>

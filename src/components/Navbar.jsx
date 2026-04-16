@@ -1,20 +1,28 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import './Navbar.css';
 
-const navLinks = [
-  { to: '/',           label: 'Home' },
-  { to: '/about',      label: 'About Us' },
-  { to: '/statistics', label: 'Statistics' },
-  { to: '/achievers',  label: 'High Achievers' },
-  { to: '/team',       label: 'Team' },
-  { to: '/gallery',    label: 'Gallery' },
-  { to: '/opinions',   label: 'Opinions' },
+const navKeys = [
+  { to: '/',           key: 'nav_home' },
+  { to: '/about',      key: 'nav_about' },
+  { to: '/statistics', key: 'nav_stats' },
+  { to: '/achievers',  key: 'nav_achievers' },
+  { to: '/team',       key: 'nav_team' },
+  { to: '/gallery',    key: 'nav_gallery' },
+  { to: '/opinions',   key: 'nav_opinions' },
+];
+
+const LANGS = [
+  { code: 'en', label: 'EN' },
+  { code: 'tr', label: 'TR' },
+  { code: 'so', label: 'SO' },
 ];
 
 const Navbar = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { t, language, changeLanguage } = useLanguage();
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -28,22 +36,35 @@ const Navbar = () => {
         </div>
 
         <ul className={`nav-links${menuOpen ? ' nav-open' : ''}`}>
-          {navLinks.map(({ to, label }) => (
+          {navKeys.map(({ to, key }) => (
             <li key={to}>
               <Link
                 to={to}
                 className={location.pathname === to ? 'active-link' : ''}
                 onClick={closeMenu}
               >
-                {label}
+                {t(key)}
               </Link>
             </li>
           ))}
         </ul>
 
         <div className="nav-right">
+          <div className="lang-switcher">
+            {LANGS.map(({ code, label }) => (
+              <button
+                key={code}
+                className={`lang-btn${language === code ? ' lang-active' : ''}`}
+                onClick={() => changeLanguage(code)}
+                aria-label={`Switch to ${label}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
           <Link to="/join" className="btn btn-primary nav-join-btn" onClick={closeMenu}>
-            Join Us
+            {t('nav_join')}
           </Link>
 
           <button
